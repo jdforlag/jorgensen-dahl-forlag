@@ -1,0 +1,407 @@
+/* 
+=========================
+FARGEPALETT
+=========================
+- Lysest: #FFF2D8
+- Lys: #EAD7BB
+- Mellom: #BCA37F
+- Mørkest: #113946
+*/
+
+/* 
+=========================
+GENERELLE STILER
+=========================
+*/
+
+/* Grunnleggende HTML-stil */
+html {
+    min-height: 100%;
+    background-color: whitesmoke;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Grunnleggende Body-stil */
+body {
+    margin: 0px;
+    font-family: video, Courier, monospace;  /*, 'Courier New', Courier, monospace, 'sans serif'; */
+    font-weight: lighter;
+}
+
+main > *{
+    margin: 0px;
+    margin-top: 32px;
+    margin-bottom:32px;
+}
+
+/* Standardstil for paragrafer */
+p {
+    font-size: 12pt;
+    line-height: 22px ;
+}
+
+figcaption{
+    line-height: 16px;
+}
+/* 
+=========================
+HEADER-STILER
+=========================
+*/
+
+/* Generelle stiler for toppteksten */
+#headerTop {
+    background-color: #113946;
+    /* position: sticky;
+    top:0px;
+    z-index: 1000; */
+    /* padding: 10px 0; */
+}
+
+.header-content {
+    display: flex;
+    padding: 20px;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Stiler for firmanavn og logo */
+.companyAndLogo {
+    padding-left: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+    /* Logo bildestil */
+    .logoimg {
+        width: 20px;
+    }
+
+    /* Tekststil for firmanavn */
+    .companyTxt {
+        color: #FFF2D8;
+    }
+
+
+    
+
+/* 
+=========================
+NAVIGASJONSSTILER
+=========================
+*/
+
+nav a {
+    color: #FFF2D8;
+    padding: 5px;
+    text-decoration: none;
+    position: relative;
+
+}
+.hover-2 { 
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+        background-color: #EAD7BB;
+
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        &:after {
+            transform: scaleX(1);    
+        }
+    }
+}
+
+/* 
+=========================
+HOVEDINNHOLD
+=========================
+*/
+
+.wrapper {
+    margin: auto;
+    max-width: 75rem;
+}
+
+#hero {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('images/bg_valley5.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    padding: 40px;
+    padding-top: 24px;
+}
+/* #hero p{
+    font-size: larger;
+} */
+
+    #heroFig {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    /* Bildeeffekter for hero-seksjonen */
+    #heroFig img {
+        width: 150px;
+        filter: drop-shadow(10px 10px 4px #3b3b4c);
+    }
+
+.boker {
+    padding: 40px;
+    padding-top: 32px;
+    background-color: #FFF2D8;
+}
+
+.ruleU{
+    background-image: 
+        linear-gradient(rgba(255, 242, 216, 0.8), rgba(255, 242, 216, 0.8)),
+        url('images/bg_valley1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
+}
+
+#ruleV{
+    background-image: 
+        linear-gradient(rgba(255, 242, 216, 0.8), rgba(255, 242, 216, 0.8)),
+        url('images/bg_valley4.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#bestill {
+    padding: 40px;
+    padding-top: 32px;
+    background-image: 
+        linear-gradient(rgba(17, 57, 70, 0.8), rgba(17, 57, 70, 0.8)),
+        url('images/bg_cover.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    /* background-attachment: fixed; */
+    color: #FFF2D8;
+}
+
+    #bestill a {
+        color: inherit;
+    }
+    #bestill li{
+        margin: 10px;
+    }
+
+.bokOgTxt-container figure{
+    margin: auto;
+}
+
+figcaption{
+    font-size: smaller;
+}
+
+    /* Bildeeffekter for bok container */
+    .bok-flexcontainer img {
+        width: 150px;
+    }
+
+.boktekst {
+    font-size: 12px;
+}
+
+h3 span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pretitle {
+    font-size: smaller;
+    font-weight: lighter;
+    margin-top: 24px;
+    margin-bottom: -12px;
+}
+
+#kontakt {
+    padding: 40px;
+    padding-top: 32px;
+    background-image: 
+        linear-gradient(rgba(255, 242, 216, 0.8), rgba(255, 242, 216, 0.8)),
+        url('images/mail3.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top left;
+    /* background-attachment: fixed; */
+}
+
+figure {
+    width: 200px;
+    text-align: center;
+}
+
+/* Les mer */
+#lesMerUS, #lesMerVGS{
+    display: none;
+}
+
+/* 
+=========================
+Om oss og kontakt
+=========================
+*/
+
+#om{
+    background-color:#FFF2D8 ;
+    padding: 40px;
+    padding-top: 32px;
+}
+
+.rolle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+=========================
+KNAPPER
+=========================
+*/
+
+.my-button {
+    color: #FFF2D8;
+    background-color: #113946;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: video, Courier, monospace;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .my-button:hover {
+        background-color: #0a2c36;
+    }
+
+    .my-button:active {
+        background-color: #09222a;
+        transform: translateY(2px);
+    }
+
+/* 
+=========================
+FOTER-STILER
+=========================
+*/
+
+#footerbg {
+    /* padding:20px; */
+    background-color: #113946;
+}
+
+footer {
+    display: flex;
+    padding: 20px;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+    footer .orgnr {
+        padding: 4.5px;
+        color: #FFF2D8;
+        font-size: smaller;
+    }
+
+/* 
+=========================
+MEDIA QUERIES FOR RESPONSIVE DESIGN
+=========================
+*/
+
+@media screen and (min-width: 950px){
+    #hero {
+        padding:40px;
+        padding-top: 24px;
+        display: flex;
+        gap: 40px;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 745px){
+    .rolle-container{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center;
+        align-items: center; */
+    }
+}
+
+@media screen and (min-width: 650px) {
+    main > *{
+        margin: 32px;
+    }
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        /* padding: 20px; */
+    }
+
+    .header-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+    .header-content .companyAndLogo{
+        padding-top: 4px;
+    }
+
+    .bok-flexcontainer > :first-child {
+        width: 150px;
+        height: 221.84px;
+    }
+    
+    .bok-flexcontainer > :nth-child(2) {
+        flex-grow: 1;
+    }
+    .bokOgTxt-container {
+        display: flex;
+        gap:30px;
+    }
+    .bokOgTxt-container figure{
+        margin: 15px;
+        margin-left:-10px;
+        width: 170px;
+        align-self: flex-start;
+    }
+
+
+}
